@@ -19,3 +19,7 @@ C:\Users\lavin\Source\Repos\LojaRest\LojaAppRest\obj\Debug\LojaAppRest.Propertie
 C:\Users\lavin\Source\Repos\LojaRest\LojaAppRest\obj\Debug\LojaAppRest.csproj.GenerateResource.Cache
 C:\Users\lavin\Source\Repos\LojaRest\LojaAppRest\obj\Debug\LojaAppRest.exe
 C:\Users\lavin\Source\Repos\LojaRest\LojaAppRest\obj\Debug\LojaAppRest.pdb
+C:\Users\lavin\Source\Repos\LojaRest\LojaAppRest\obj\Debug\CRUDFabricante.g.cs
+C:\Users\lavin\Source\Repos\LojaRest\LojaAppRest\obj\Debug\CRUDVeiculos.g.cs
+C:\Users\lavin\Source\Repos\LojaRest\LojaAppRest\obj\Debug\CRUDFabricante.baml
+C:\Users\lavin\Source\Repos\LojaRest\LojaAppRest\obj\Debug\CRUDVeiculos.baml

@@ -5,8 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LojaAppRest"
         mc:Ignorable="d"
-        Title="CRUDVeiculos" Height="300" Width="300">
+        Title="CRUDVeiculos" Height="370.8" Width="578.8">
     <Grid>
-        
+        <TextBox x:Name="txtValorCompra" HorizontalAlignment="Left" Height="23" Margin="218,54,-44.4,0" TextWrapping="Wrap" Text="Valor Compra" VerticalAlignment="Top" Width="120"/>
+        <DatePicker x:Name="dp" HorizontalAlignment="Left" Margin="218,22,-44.4,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtID" HorizontalAlignment="Left" Height="23" Margin="10,25,0,0" TextWrapping="Wrap" Text="Id" VerticalAlignment="Top" Width="78"/>
+        <DataGrid x:Name="dataGrid" Margin="10,118,-263.4,-49.6" VerticalAlignment="Top" Height="202" HorizontalAlignment="Left" Width="547" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Id}" Header="Id"/>
+                <DataGridTextColumn Binding="{Binding Modelo}" Header="Modelo"/>
+                <DataGridTextColumn Binding="{Binding Ano}" Header="Ano"/>
+                <DataGridTextColumn Binding="{Binding IdFabricante}" Header="IdFabricante"/>
+                <DataGridTextColumn Binding="{Binding DataCompra}" Header="DataCompra"/>
+                <DataGridTextColumn Binding="{Binding ValorCompra}" Header="ValorCompra"/>
+                <DataGridTextColumn Binding="{Binding PrecoVenda}" Header="PrecoVenda"/>
+                <DataGridTextColumn Binding="{Binding DataVenda}" Header="DataVenda"/>
+                <DataGridTextColumn Binding="{Binding ValorVenda}" Header="ValorVenda"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="txtModelo" HorizontalAlignment="Left" Height="23" Margin="10,53,0,0" TextWrapping="Wrap" Text="Modelo" VerticalAlignment="Top" Width="78"/>
+        <TextBox x:Name="txtAno" HorizontalAlignment="Left" Height="23" Margin="93,54,0,0" TextWrapping="Wrap" Text="Ano" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cb" HorizontalAlignment="Left" Margin="93,25,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnSelect" Content="Select" HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top" Width="75" Click="btnSelect_Click"/>
+        <Button x:Name="btnInsert" Content="Insert" HorizontalAlignment="Left" Margin="90,86,0,0" VerticalAlignment="Top" Width="75" Click="btnInsert_Click"/>
+        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="170,86,0,0" VerticalAlignment="Top" Width="75" Click="btnUpdate_Click"/>
+        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="250,86,0,0" VerticalAlignment="Top" Width="75" Click="btnDelete_Click"/>
+        <TextBox x:Name="txtPrecoVenda" HorizontalAlignment="Left" Height="23" Margin="343,53,0,0" TextWrapping="Wrap" Text="Preço Venda" VerticalAlignment="Top" Width="120"/>
+
     </Grid>
 </Window>
