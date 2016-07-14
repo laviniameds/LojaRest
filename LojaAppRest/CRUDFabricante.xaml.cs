@@ -52,6 +52,7 @@ namespace LojaAppRest
             string s = "=" + JsonConvert.SerializeObject(fl);
             var content = new StringContent(s, Encoding.UTF8, "application/x-www-form-urlencoded");
             await httpClient.PostAsync("/api/Fabricante/", content);
+            MessageBox.Show("Inserido com sucesso!");
         }
 
         private async void btnUpdate_Click(object sender, RoutedEventArgs e)
@@ -66,6 +67,7 @@ namespace LojaAppRest
             string s = "=" + JsonConvert.SerializeObject(f);
             var content = new StringContent(s, Encoding.UTF8, "application/x-www-form-urlencoded");
             await httpClient.PutAsync("/api/Fabricante/" + f.Id, content);
+            MessageBox.Show("Atualizado com sucesso!");
         }
 
         private async void btnDelete_Click(object sender, RoutedEventArgs e)
@@ -73,6 +75,7 @@ namespace LojaAppRest
             HttpClient httpClient = new HttpClient();
             httpClient.BaseAddress = new Uri(ip);
             await httpClient.DeleteAsync("/api/Fabricante/" + txtId.Text);
+            MessageBox.Show("Deletado com sucesso!");
         }
     }
 }

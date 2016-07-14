@@ -61,7 +61,7 @@ namespace LojaAppRest
                 Id = int.Parse(txtID.Text),
                 Modelo = txtModelo.Text,
                 Ano = int.Parse(txtAno.Text),
-                IdFabricante = int.Parse(cb.SelectedValuePath),
+                IdFabricante = int.Parse(cb.SelectedValue.ToString()),
                 DataCompra = Convert.ToDateTime(dp.SelectedDate),
                 ValorCompra = Convert.ToDecimal(txtValorCompra.Text),
                 PrecoVenda = Convert.ToDecimal(txtPrecoVenda.Text),

@@ -8,17 +8,17 @@
         <elementListCompartment Id="a6ac93b5-ebbb-42e0-ac1c-739d112fa1a8" absoluteBounds="1.7650000000000001, 1.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="7ec73e67-7415-44af-82a0-33ee9479d9f2" absoluteBounds="1.75, 3, 2, 2.5401025390625">
+    <classShape Id="eef8b825-19fc-48b7-99d8-2fb7269f8561" absoluteBounds="1.5, 3.125, 2, 2.5401025390625">
       <DataClassMoniker Name="/LojaDataContext/Veiculo" />
       <nestedChildShapes>
-        <elementListCompartment Id="6b7945d7-2b72-4b33-9fc2-cacf3dac78cf" absoluteBounds="1.7650000000000001, 3.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="6ceb865b-846e-415d-8b65-045b403f7577" absoluteBounds="1.5150000000000001, 3.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.75 : 2.44399251302083); (2.75 : 3)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.625 : 2.44399251302083); (2.625 : 3.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/LojaDataContext/Fabricante/Fabricante_Veiculo" />
       <nodes>
         <classShapeMoniker Id="46062e08-6cb9-42e2-ab7a-98c86bbcce0e" />
-        <classShapeMoniker Id="7ec73e67-7415-44af-82a0-33ee9479d9f2" />
+        <classShapeMoniker Id="eef8b825-19fc-48b7-99d8-2fb7269f8561" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>
