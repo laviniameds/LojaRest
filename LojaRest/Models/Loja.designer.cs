@@ -154,7 +154,7 @@ namespace LojaRest.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Fabricante_Veiculo", Storage="_Veiculos", ThisKey="Id", OtherKey="IdFabricante")]
-		public EntitySet<Veiculo> Veiculos
+		internal EntitySet<Veiculo> Veiculos
 		{
 			get
 			{
@@ -440,7 +440,7 @@ namespace LojaRest.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Fabricante_Veiculo", Storage="_Fabricante", ThisKey="IdFabricante", OtherKey="Id", IsForeignKey=true)]
-		public Fabricante Fabricante
+		internal Fabricante Fabricante
 		{
 			get
 			{

@@ -32,10 +32,10 @@ namespace LojaAppRest
         {
             HttpClient httpClient = new HttpClient();
             httpClient.BaseAddress = new Uri(ip);
-            var response = await httpClient.GetAsync("/api/fabricante/");
+            var response = await httpClient.GetAsync("/api/Fabricante/");
             var str = response.Content.ReadAsStringAsync().Result;
             List<Models.Fabricante> obj = JsonConvert.DeserializeObject<List<Models.Fabricante>>(str);
-            ListBoxFabricantes.ItemsSource = obj;
+            dataGrid.ItemsSource = obj;
         }
 
         private async void btnInsert_Click(object sender, RoutedEventArgs e)
@@ -51,7 +51,7 @@ namespace LojaAppRest
             fl.Add(f);
             string s = "=" + JsonConvert.SerializeObject(fl);
             var content = new StringContent(s, Encoding.UTF8, "application/x-www-form-urlencoded");
-            await httpClient.PostAsync("/api/fabricante/", content);
+            await httpClient.PostAsync("/api/Fabricante/", content);
         }
 
         private async void btnUpdate_Click(object sender, RoutedEventArgs e)
@@ -65,14 +65,14 @@ namespace LojaAppRest
             };
             string s = "=" + JsonConvert.SerializeObject(f);
             var content = new StringContent(s, Encoding.UTF8, "application/x-www-form-urlencoded");
-            await httpClient.PutAsync("/api/fabricante/" + f.Id, content);
+            await httpClient.PutAsync("/api/Fabricante/" + f.Id, content);
         }
 
         private async void btnDelete_Click(object sender, RoutedEventArgs e)
         {
             HttpClient httpClient = new HttpClient();
             httpClient.BaseAddress = new Uri(ip);
-            await httpClient.DeleteAsync("/api/fabricante/" + txtId.Text);
+            await httpClient.DeleteAsync("/api/Fabricante/" + txtId.Text);
         }
     }
 }

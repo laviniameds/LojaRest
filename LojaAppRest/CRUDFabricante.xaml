@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LojaAppRest"
         mc:Ignorable="d"
-        Title="CRUDFabricante" Height="350" Width="525">
+        Title="CRUDFabricante" Height="350" Width="345.8">
     <Grid>
         <TextBox x:Name="txtId" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="Id" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txtDesc" HorizontalAlignment="Left" Height="23" Margin="135,10,0,0" TextWrapping="Wrap" Text="Descrição" VerticalAlignment="Top" Width="120"/>
@@ -13,17 +13,12 @@
         <Button x:Name="btnInsert" Content="Insert" HorizontalAlignment="Left" Margin="90,38,0,0" VerticalAlignment="Top" Width="75" Click="btnInsert_Click"/>
         <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="170,38,0,0" VerticalAlignment="Top" Width="75" Click="btnUpdate_Click"/>
         <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="250,38,0,0" VerticalAlignment="Top" Width="75" Click="btnDelete_Click"/>
-        <ListBox x:Name="ListBoxFabricantes" Margin="10,70,10,10">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock FontSize="14" Text="{Binding Id}" />
-                        <TextBlock FontSize="14" Text=" - " />
-                        <TextBlock FontSize="14" Text="{Binding Descricao}"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top" Height="221" Width="315" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Id}" Header="Id"/>
+                <DataGridTextColumn Binding="{Binding Descricao}" Header="Descricao"/>
+            </DataGrid.Columns>
+        </DataGrid>
 
     </Grid>
 </Window>
