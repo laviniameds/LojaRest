@@ -65,6 +65,8 @@ namespace LojaAppRest
                 DataCompra = Convert.ToDateTime(dp.SelectedDate),
                 ValorCompra = Convert.ToDecimal(txtValorCompra.Text),
                 PrecoVenda = Convert.ToDecimal(txtPrecoVenda.Text),
+                DataVenda = Convert.ToDateTime(dp.SelectedDate),
+                ValorVenda = 0
             };
             List<Models.Veiculo> fl = new List<Models.Veiculo>();
             fl.Add(f);
@@ -86,6 +88,8 @@ namespace LojaAppRest
                 DataCompra = Convert.ToDateTime(dp.SelectedDate),
                 ValorCompra = Convert.ToDecimal(txtValorCompra.Text),
                 PrecoVenda = Convert.ToDecimal(txtPrecoVenda.Text),
+                DataVenda = Convert.ToDateTime(dp.SelectedDate),
+                ValorVenda = 0
             };
             string s = "=" + JsonConvert.SerializeObject(f);
             var content = new StringContent(s, Encoding.UTF8, "application/x-www-form-urlencoded");
