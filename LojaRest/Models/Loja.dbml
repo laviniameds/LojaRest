@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="20131011110010" Class="LojaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=Valera;Initial Catalog=20131011110010;Persist Security Info=True;User ID=20131011110010" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="_20131011110010ConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LojaApp" Class="LojaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=LAVINIA-PC\SQLEXPRESS;Initial Catalog=LojaApp;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="LojaAppConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Fabricante" Member="Fabricantes">
     <Type Name="Fabricante">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Descricao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="Fabricante_Veiculo" Member="Veiculos" AccessModifier="Internal" ThisKey="Id" OtherKey="IdFabricante" Type="Veiculo" />
+      <Column Name="Descricao" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Fabricante_Veiculo" Member="Veiculos" ThisKey="Id" OtherKey="IdFabricante" Type="Veiculo" />
     </Type>
   </Table>
   <Table Name="dbo.Veiculo" Member="Veiculos">
@@ -18,7 +18,7 @@
       <Column Name="PrecoVenda" Type="System.Decimal" DbType="Money" CanBeNull="true" />
       <Column Name="DataVenda" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="ValorVenda" Type="System.Decimal" DbType="Money" CanBeNull="true" />
-      <Association Name="Fabricante_Veiculo" Member="Fabricante" AccessModifier="Internal" ThisKey="IdFabricante" OtherKey="Id" Type="Fabricante" IsForeignKey="true" />
+      <Association Name="Fabricante_Veiculo" Member="Fabricante" ThisKey="IdFabricante" OtherKey="Id" Type="Fabricante" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

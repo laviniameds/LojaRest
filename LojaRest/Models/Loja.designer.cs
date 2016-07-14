@@ -22,7 +22,7 @@ namespace LojaRest.Models
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="20131011110010")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="LojaApp")]
 	public partial class LojaDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -39,7 +39,7 @@ namespace LojaRest.Models
     #endregion
 		
 		public LojaDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["_20131011110010ConnectionString"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["LojaAppConnectionString"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -133,7 +133,7 @@ namespace LojaRest.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descricao", DbType="VarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descricao", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
 		public string Descricao
 		{
 			get
@@ -154,7 +154,7 @@ namespace LojaRest.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Fabricante_Veiculo", Storage="_Veiculos", ThisKey="Id", OtherKey="IdFabricante")]
-		internal EntitySet<Veiculo> Veiculos
+		public EntitySet<Veiculo> Veiculos
 		{
 			get
 			{
@@ -440,7 +440,7 @@ namespace LojaRest.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Fabricante_Veiculo", Storage="_Fabricante", ThisKey="IdFabricante", OtherKey="Id", IsForeignKey=true)]
-		internal Fabricante Fabricante
+		public Fabricante Fabricante
 		{
 			get
 			{

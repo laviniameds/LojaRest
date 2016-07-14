@@ -10,29 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace LojaAppRest
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CRUDVeiculos.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CRUDVeiculos : Window
     {
-        public MainWindow()
+        public CRUDVeiculos()
         {
             InitializeComponent();
-        }
-
-        private void CRUDVei_Click(object sender, RoutedEventArgs e)
-        {
-            (new CRUDVeiculos()).Show();
-        }
-
-        private void CRUDFab_Click(object sender, RoutedEventArgs e)
-        {
-            (new CRUDFabricante()).Show();
         }
     }
 }
